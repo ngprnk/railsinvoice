@@ -1,0 +1,57 @@
+<%= wisepdf_stylesheet_tag "bootstrap.min" %>
+<div class="container" style="margin-top: 100px;">
+  <p id="notice" ><%= notice %></p>
+
+  <div class="container col-md-8 col-md-offset-1" style="border: 1px solid #e3e3e3">
+    
+    <h1 style="margin-left: 20px;">Items</h1>
+
+    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+      <table class="table table-hover">
+        <thead>
+          <tr class="bg-primary">
+            <th>Item Name</th>
+            <th>Quantity </th>
+            <th>Rate</th>
+            <th>Amount</th>
+            <th>action</th>
+            <th>action</th>
+
+          </tr>
+        </thead>
+        <tbody>
+         <tbody>
+          <% @particulars.each do |particular| %>
+          <tr>
+            <td><%= particular.itemname %></td>
+            <td><%= particular.quantity %></td>
+            <td>RM <%= particular.rate %></td>
+            <td>RM <%= particular.quantity * particular.rate %></td>
+
+
+            <td><%= link_to 'Edit', edit_particular_path(particular) , class: "text-danger" %></td>
+            <td><%= link_to 'Remove', particular, class: "text-danger",method: :delete, data: { confirm: 'Are you sure?' }%></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <%= link_to 'Add New Item', new_particular_path , class: "btn btn-sm btn-default" %>
+      <%= link_to 'Generate pdf', particulars_pdfindex_path(format: 'pdf') , class: "btn btn-sm btn-success" %>
+
+      <%= link_to 'Generate pdf details', details_showpdf_path(format: 'pdf') , class: "btn btn-sm btn-success" %>
+    </div>
+
+  </div>
+  <div class="col-md-4 col-md-offset-4">
+  
+</div>
+
+ 
+ 
+
+
+
+
+
+
+

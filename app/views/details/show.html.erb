@@ -1,0 +1,28 @@
+<div class="container" style="margin-top:50px;">
+
+	
+	<h1> Details form </h1>
+	<p> Serial No: <%= @count %> </p>
+	<p>
+		TO:<%= @detail.to %>
+	</p>
+
+	<p>
+		from:<%=@detail.from %>
+	</p>
+
+	<p>
+		billno:<%= @detail.billno %>
+	</p>
+
+	<p>
+		invoice created at:  <%=@detail.invoicedate %>
+	</p>
+
+	<p>
+		due date :  <%= @detail.duedate %>
+	</p>
+
+	<%= link_to("<< Return to Homepage", root_path ) %>
+	
+</div>

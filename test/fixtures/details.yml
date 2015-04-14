@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  from: MyText
+  to: MyText
+  billno: MyString
+  invoicedate: 2015-02-03 18:40:14
+  duedate: 2015-02-03 18:40:14
+
+two:
+  from: MyText
+  to: MyText
+  billno: MyString
+  invoicedate: 2015-02-03 18:40:14
+  duedate: 2015-02-03 18:40:14

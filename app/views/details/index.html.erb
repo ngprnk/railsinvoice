@@ -1,0 +1,30 @@
+<div class="container" style="margin-top:60px;">
+	<h1>
+		Every data entered is shown below
+	</h1>
+
+	<% if @a==0 %>
+	0 records found
+	<% end %>
+
+</div>
+
+
+
+
+<div class="container col-md-6 col-md-offset-1" style="border: 1px solid #e3e3e3">
+	<div class="container col-md-5 col-md-offset-2" >
+		<h2 class="text-success">Invoice details</h2>
+		<% @details.each do |d| %>
+
+		<p>	<span class="text-info">From: </span><%= d.from%></p>
+		<p><span class="text-info">To: </span><%= d.to %></p>
+		<p><span class="text-info">Bill no: </span><%= d.billno %></p>
+		<p><span class="text-info">Invoice date: </span><%= d.invoicedate %></p>
+		<p><span class="text-info">Due date: </span><%= d.duedate %></p>
+	</br>
+	<% end %>
+
+</div>
+
+</div>

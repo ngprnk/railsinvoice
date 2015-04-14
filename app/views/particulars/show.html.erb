@@ -1,0 +1,32 @@
+<div class="container" style="margin-top: 100px;">
+	
+
+<p id="notice"><%= notice %></p>
+
+
+  <strong>Itemname:</strong>
+  <%= @particular.itemname %>
+
+&nbsp&nbsp&nbsp
+
+
+  <strong>Quantity:</strong>
+  <%= @particular.quantity %>
+&nbsp&nbsp&nbsp
+
+
+
+
+  <strong>Rate:</strong>
+  <%= @particular.rate %>
+&nbsp&nbsp&nbsp&nbsp
+
+
+  <strong>Amount</strong>
+  <%= @amount %>
+  &nbsp&nbsp&nbsp
+
+<%= link_to 'Edit', edit_particular_path(@particular) %> |
+<%= link_to 'Back', particulars_path %>
+<%= link_to 'New', new_particular_path %>
+</div>

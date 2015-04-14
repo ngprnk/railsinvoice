@@ -1,0 +1,30 @@
+<div class="container" style="margin-top:50px;">
+
+	
+	<h1> Details form </h1>
+	
+	<p>
+		TO:<%= @showl.to %>
+	</p>
+
+	<p>
+		from:<%=@showl.from %>
+	</p>
+
+	<p>
+		billno:<%= @showl.billno %>
+	</p>
+
+	<p>
+		invoice created at:  <%=@showl.invoicedate %>
+	</p>
+
+	<p>
+		due date :  <%= @showl.duedate %>
+	</p>
+
+	<%= link_to("<< Return to Homepage", root_path ) %>
+	
+</div>
+
+

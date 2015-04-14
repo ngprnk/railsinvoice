@@ -1,0 +1,32 @@
+<div class="conatiner" style="margin-top: 10px;">
+  
+<%= form_for(@particular) do |f| %>
+  <% if @particular.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@particular.errors.count, "error") %> prohibited this particular from being saved:</h2>
+
+      <ul>
+      <% @particular.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <%= f.label :itemname %> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= f.label :quantity %>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= f.label :rate %> </br>
+    <%= f.text_field :itemname ,placeholder: "Item Name" %>
+
+
+    <%= f.number_field :quantity , placeholder: 'Number of items'%>
+ 
+ 
+    
+    RM <%= f.number_field :rate,:placeholder => " Ringgit" %>
+
+  
+  <div class="actions" style="margin-top: 20px;">
+    <%= f.submit "create" ,class: "btn btn-primary"%>
+  </div>
+<% end %>
+</div>
