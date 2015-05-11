@@ -8,13 +8,13 @@
 
 		<%= form_for @detail do |f| %>
 		<p>
-			From
+			From address
 			<%= f.text_area :from %>
 		</p>
 
 
 		<p>
-			To
+			To address
 			<%= f.text_area :to %>
 		</p>
 
@@ -24,11 +24,12 @@
 		</p>	
 
 		<p>
-
+invoice date
 			<%= f.date_select :invoicedate %>
 		</p>
 
 		<p>
+		Due date
 
 			<%= f.date_select :duedate %>
 		</p>
